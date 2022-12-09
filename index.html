@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body id="body">
+    <div class="main_container">
+        <!-- Search Panel -->
+        <div class="search_section">
+            <input type="search" placeholder="Search your meal" id="search_area">
+            <button onclick="getDataBySearch()"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <!-- Favorite Panel -->
+        <div class="fav_section">
+            <h2>Your Favorite Meals</h2>
+            <div class="fav_meals" id="fav_meals"></div>
+        </div>
+        <!-- Home Panel-->
+        <div class="home_section" id="randmain"></div>
+        <div class="home_section" id="main"></div>
+    </div>
+</body>
+
+</html>

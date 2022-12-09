@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+body {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-image: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    /* min-width: 200vh; */
+}
+
+.main_container {
+    background-color: white;
+    width: 25%;
+    min-height: 90%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 30px 10px #dad4ec82;
+}
+
+.search_section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 5px;
+    margin: 12px;
+}
+
+.search_section input {
+    border: none;
+    background-color: #ede2e7c4;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 3px;
+    outline: none;
+    width: 80%;
+}
+
+.search_section button {
+    border: none;
+    background-color: #ede2e7c4;
+    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.fav_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ecd4e5bd;
+}
+
+.fav_section:hover .xmark {
+    opacity: 1;
+}
+
+.fav_section h2 {
+    font-size: 18px;
+}
+
+.fav_meals {
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 10px;
+}
+
+.favmeal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80px;
+    position: relative;
+}
+
+.favmeal:hover {
+    transform: scale(1.05);
+    transition: 300ms ease 0s;
+    cursor: pointer;
+}
+
+.favmeal img {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    border: 2px solid white;
+}
+
+.favmeal span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+    text-align: center;
+}
+
+.xmark {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: rgba(128, 128, 128, 0.6);
+    color: white;
+    cursor: pointer;
+}
+
+.xmark:hover {
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+.randommeal {
+    border: 1px solid rgba(128, 128, 128, 0.239);
+    border-radius: 10px;
+    margin: 10px;
+    position: relative;
+}
+
+.home_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.randommeal p {
+    position: absolute;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 1px 10px 1px 20px;
+}
+
+.randommeal img {
+    width: 100%;
+    /* background-position: center; */
+    /* height: 100px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.meal__container_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 10px;
+}
+
+.meal__container_title h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.meal__container_title button {
+    border: none;
+    background-color: white;
+    font-size: 22px;
+    color: rgba(128, 128, 128, 0.65);
+    cursor: pointer;
+}
+
+.meal__container_title .active {
+    color: rgba(255, 0, 0, 0.65);
+}
+
+.infoPop {
+    position: absolute;
+    top: 0;
+    width: 35%;
+    overflow:auto;
+    max-height: 100vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:0 0 0 100vh rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+.infoPop button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    border: none;
+    font-size: 20px;
+    color: grey;
+}
+.infoPop button:hover{
+    transform: scale(1.1);
+    transition: 300ms ease 0s;
+    cursor: pointer;
+}
+.infoPop img {
+    width: 100%;
+    /* height: 90%; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.infoPop_name{
+    font-size: 25px;
+    font-weight: 600;
+    word-wrap: break-word;
+    margin: 20px 0px;
+}
+.infoPop_recipe{
+    margin: 0px 10px;
+}
+.infoPop_ingre ul{
+    font-size: 20px;
+}
+.infoPop_ingre li{
+    list-style: none;
+    font-size: 15px;
+}
+@media screen and (max-width: 1600px) {
+    .main_container {
+        width: 30%;
+    }
+    .infoPop {
+        width: 40%;
+    }
+  }
+  @media screen and (max-width: 1250px) {
+    .main_container {
+        width: 35%;
+    }
+    .infoPop {
+        width: 45%;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .main_container {
+        width: 40%;
+    }
+    .infoPop {
+        width: 50%;
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .main_container {
+        width: 45%;
+    }
+    .infoPop {
+        width: 55%;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    .main_container {
+        width: 90%;
+    }
+    .infoPop {
+        width: 95%
+    }
+    .xmark{
+        opacity: 1;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .main_container {
+        width: 100%;
+    }
+}
