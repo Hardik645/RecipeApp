@@ -78,10 +78,13 @@ const addMealonsearch = (Data) => {
     });
 }
 const addfav = (id) => {
-    const fav_array = JSON.parse(localStorage.getItem("fav"));
-    fav_array.push(id);
-    localStorage.setItem("fav", JSON.stringify(fav_array))
+    const mealIds = getMealsLS();
+    localStorage.setItem("fav", JSON.stringify([...mealIds,id]));
     printFav()
+}
+function getMealsLS() {
+    const mealIds = JSON.parse(localStorage.getItem("fav"));
+    return mealIds === null ? [] : mealIds;
 }
 const removefav = (id) => {
     let fav_array = JSON.parse(localStorage.getItem("fav"));
